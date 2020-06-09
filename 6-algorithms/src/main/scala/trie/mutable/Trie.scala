@@ -1,11 +1,11 @@
-package trie
+package trie.mutable
 
 // 6.2
 class Trie {
 
-  case class Node(
-      var exist: Boolean,
-      children: collection.mutable.Map[Char, Node] = collection.mutable.Map()
+  sealed case class Node(
+    var exist: Boolean,
+    children: collection.mutable.Map[Char, Node] = collection.mutable.Map()
   )
 
   private val root = Node(exist = false)
@@ -53,7 +53,7 @@ class Trie {
     var node = Option(root)
     for (c <- prefix if node.nonEmpty) node = node.get.children.get(c)
     node match {
-      case None       => Set()
+      case None => Set()
       case Some(node) => loop(node, prefix)
     }
   }

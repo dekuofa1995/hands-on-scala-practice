@@ -13,8 +13,8 @@ object BinarySearch extends SortedArraySearch {
         val midValue = array(mid)
         midValue match {
           case x if Ordering[T].equiv(x, t) => Some(mid) // mid == target
-          case x if Ordering[T].gt(x, t)    => loop(left, mid - 1)
-          case x if Ordering[T].lt(x, t)    => loop(mid + 1, right)
+          case x if Ordering[T].gt(x, t) => loop(left, mid - 1)
+          case x if Ordering[T].lt(x, t) => loop(mid + 1, right)
         }
       }
     }

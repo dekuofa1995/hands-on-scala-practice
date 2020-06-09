@@ -2,6 +2,7 @@ package trie
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
+import trie.mutable.Trie
 
 class TrieSpec extends AnyWordSpec with Matchers {
 

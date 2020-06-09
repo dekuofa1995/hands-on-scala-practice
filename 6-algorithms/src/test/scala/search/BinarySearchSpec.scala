@@ -30,18 +30,13 @@ class BinarySearchSpec extends AnyWordSpec with Matchers {
     }
 
     """search(Vector("i", "am", "cow", "hear", "me", "moo"), cow) === Some(2)""" in {
-      assert(
-        indexOf(Array("i", "am", "cow", "hear", "me", "moo"), "cow") === Some(
-          2))
+      assert(indexOf(Array("i", "am", "cow", "hear", "me", "moo"), "cow") === Some(2))
     }
     """search(Vector("i", "am", "cow", "hear", "me", "moo"), moo) === Some(5)""" in {
-      assert(
-        indexOf(Array("i", "am", "cow", "hear", "me", "moo"), "moo") === Some(
-          5))
+      assert(indexOf(Array("i", "am", "cow", "hear", "me", "moo"), "moo") === Some(5))
     }
     """search(Vector("i", "am", "cow", "hear", "me", "moo"), horse) === None""" in {
-      assert(
-        indexOf(Array("i", "am", "cow", "hear", "me", "moo"), "horse") === None)
+      assert(indexOf(Array("i", "am", "cow", "hear", "me", "moo"), "horse") === None)
     }
   }
 
