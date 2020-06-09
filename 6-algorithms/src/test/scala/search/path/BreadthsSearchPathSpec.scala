@@ -3,9 +3,9 @@ package search.path
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 
-class BreadthSearchPath extends AnyWordSpec with Matchers {
+class BreadthsSearchPathSpec extends AnyWordSpec with Matchers {
 
-  import BreadthSearchPath._
+  import BreadthSearchPaths._
   "searchPaths" should {
     "empty graph return start -> List(start)" in {
       val paths = searchPaths("a", Map())
