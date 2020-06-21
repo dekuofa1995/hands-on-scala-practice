@@ -20,3 +20,10 @@ lazy val algorithms = (project in file("6-algorithms"))
     commonSettings
     // other settings
   )
+
+lazy val filesAndSubProcesses = (project in file("7-files-and-subprocesses"))
+  .settings(
+    commonSettings,
+    libraryDependencies += os
+    // other settings
+  )
